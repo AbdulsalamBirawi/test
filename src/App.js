@@ -39,13 +39,14 @@ function App() {
         setnoaddress(false);
       } else {
         setnoaddress(true);
+
+        setres({
+          id: data.id,
+          address: data.address,
+          latitude: data.latitude,
+          langitude: data.longitude,
+        });
       }
-      setres({
-        id: data.id,
-        address: data.address,
-        latitude: data.latitude,
-        langitude: data.longitude,
-      });
 
       setSubmitted(true);
       console.log(data, res);
