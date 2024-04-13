@@ -100,7 +100,7 @@ function App() {
           {submitted ? (
             <div>
               <Typography variant="h5">your geolocation is</Typography>
-              {noaddress == false ? (
+              {noaddress === false ? (
                 <Typography color={"red"} variant="body1">
                   there is no address
                 </Typography>
