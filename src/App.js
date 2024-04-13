@@ -19,6 +19,7 @@ function App() {
   const address = useSelector(selectAddress);
   const emailAddress = useSelector(selectEmailAddress);
   const [submitted, setSubmitted] = useState(false);
+  const [noaddress, setnoaddress] = useState(false);
   const [res, setres] = useState({
     id: null,
     address: "",
@@ -34,6 +35,11 @@ function App() {
         `https://5111-45-130-203-144.ngrok-free.app/geolocation?address=${address}&email=${emailAddress}`
       );
       const data = response.data.location;
+      if (data == null) {
+        setnoaddress(false);
+      } else {
+        setnoaddress(true);
+      }
       setres({
         id: data.id,
         address: data.address,
@@ -94,7 +100,7 @@ function App() {
           {submitted ? (
             <div>
               <Typography variant="h5">your geolocation is</Typography>
-              {res == null ? (
+              {noaddress == false ? (
                 <Typography color={"red"} variant="body1">
                   there is no address
                 </Typography>
