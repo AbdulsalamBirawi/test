@@ -94,11 +94,17 @@ function App() {
           {submitted ? (
             <div>
               <Typography variant="h5">your geolocation is</Typography>
-              <Typography variant="body1">
-                your Address is {res.address}, <br />
-                {res.latitude} <br />
-                {res.langitude}
-              </Typography>
+              {res.address == null ? (
+                <Typography color={"red"} variant="body1">
+                  there is no address
+                </Typography>
+              ) : (
+                <Typography variant="body1">
+                  your Address is {res.address}, <br />
+                  {res.latitude} <br />
+                  {res.langitude}
+                </Typography>
+              )}
               <Button
                 sx={{ width: "100%" }}
                 variant="contained"
