@@ -108,7 +108,7 @@ function App() {
                 <Typography variant="body1">
                   your Address is {res.address}, <br />
                   {res.latitude} <br />
-                  {res.langitude}
+                  {res.longitude}
                 </Typography>
               )}
               <Button
