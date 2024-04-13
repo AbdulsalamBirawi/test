@@ -32,7 +32,7 @@ function App() {
 
     try {
       const response = await axios.get(
-        `http://server1.seentraining.com:3600/geolocation?address=${address}&email=${emailAddress}`
+        `https://server1.seentraining.com:3600/geolocation?address=${address}&email=${emailAddress}`
       );
       const data = response.data.location;
       if (data == null) {
