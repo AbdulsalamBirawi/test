@@ -96,7 +96,8 @@ function App() {
               <Typography variant="h5">your geolocation is</Typography>
               <Typography variant="body1">
                 your Address is {res.address}, <br />
-                {res.latitude} -{res.langitude}
+                {res.latitude} <br />
+                {res.langitude}
               </Typography>
               <Button
                 sx={{ width: "100%" }}
