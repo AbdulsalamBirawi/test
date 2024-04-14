@@ -39,12 +39,11 @@ function App() {
         setnoaddress(false);
       } else {
         setnoaddress(true);
-
         setres({
           id: data.id,
           address: data.address,
           latitude: data.latitude,
-          langitude: data.longitude,
+          longitude: data.longitude,
         });
       }
 
@@ -108,8 +107,9 @@ function App() {
                 <div>
                   <Typography variant="h5">your geolocation is</Typography>
                   <Typography variant="body1">
-                    your Address is {res.address}, <br />
-                    {res.latitude} <br />
+                    your Address is : {res.address}, <br />
+                    {res.latitude}
+                    <br />
                     {res.longitude}
                   </Typography>
                 </div>
