@@ -32,7 +32,7 @@ function App() {
 
     try {
       const response = await axios.get(
-        `https://fc5c-66-29-145-226.ngrok-free.app/geolocation?address=${address}&email=${emailAddress}`
+        `https://60f9-66-29-145-226.ngrok-free.app/geolocation?address=${address}&email=${emailAddress}`
       );
       const data = response.data.location;
       if (data == null) {
